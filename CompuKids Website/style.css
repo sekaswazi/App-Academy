@@ -1,18 +1,18 @@
-.gallery img{
-    width: 55%
+
+.gallery{
+    width: 50px;
+    align-content: center;
 }
-
-
     #menu{
         width: 80%;
         height: 40px;
-        background-color: #e5bcbc;
+        background-color: black;
         padding-top: 12px;
         padding-bottom: 12px;
 }
 
 #menu a{
-    color: #fcf7f7;
+    color: #684040;
     font-family: Helvetica, sans-serif;
     font-size: 18px;
     text-decoration: none;
@@ -22,5 +22,5 @@
 }
 
 #menu a:hoover{
-    color: #2e5d96;
+    color: #faf8f9;
 }
