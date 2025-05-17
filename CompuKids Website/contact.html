@@ -1,13 +1,31 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="images/jpg" href="images/avengers.jpg">
+        <title>contact</title>
     </head>
     <body>
-        <h2>Contac us</h2>
+        <div id="menu">
+            <a href="index.html"> Home</a>
+            <a href="about.html"> About</a>
+            <a href="contact.html"> Contact</a>            
+        </div>
+        <h2>Contact Us</h2>
+        <p>We are here to help you!</p>
+        <p>If you have any questions or feedback, please fill out the form below:</p>
+    <center>   
+       <div id="contact">
+            <a href="contact.html">            
         
-       <p>Tel: 043 555 9700</p>
-       <p>Email:superhero@heynow.com</p>
-       <p>Website: www.superhero.com</p>
+       <form action="mailto:support@sswazi.co.za" method="post">
+           <label for="email">Email:</label><br>
+           <input type="email" id="email" name="email" minlength="15" maxlength="35" required><br>
+           <label for="message">Message:</label><br>
+           <textarea id="message" name="message" required></textarea><br>
+           <input type="submit" value="Submit" button>
 
+         </form>
+         </div>
+    </center>
     </body>
 </html>
