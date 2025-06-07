@@ -3,10 +3,24 @@
 <head>
     <link rel="stylesheet" type="txt/css" href="styles.css">
 <body>
-    <h1 onclick = "if(this.innerHTML=='JavaScript'){this.innerHTML= 'Is awesome'} else (this.innerHTML='JavaScript')">JavaScript</h1>
+    <h1 id="heading" onclick = "changeText()">JavaScript</h1>
+    <p id="addition"></p>
 
     <script>
+        document.getElementById("addition").innerHTML = addNumbers(10,7);
 
+
+        function changeText() {
+            var element = document.querySelector('h1');
+            if (element.innerHTML === 'JavaScript') {
+                element.innerHTML = 'Is awesome';
+            } else {
+                element.innerHTML = 'JavaScript';
+            }
+        }
+        function addNumbers(num1, num2){
+            return num1 + num2;
+        }
     </script>
 </body>
 </html>
