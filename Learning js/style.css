@@ -1,0 +1,60 @@
+table{
+    color: #fff;
+    text-align: center;
+    border-collapse: collapse;
+    font: normal 16px Arial, sans-serif;
+}
+
+tr{
+    background-color: #4e494d;
+    height: 16.02vh;
+}
+
+td{
+    border: 1px solid #4e494d;
+    width: 25vw;
+}
+
+#inputBox{
+    background-color: #4e494d;
+    text-align: right;
+    width: 100%;
+    font-size: 2em;
+    color: #fff;
+    border: 0px;
+
+}
+ .digitButton{
+    background-color: #807e80;
+ }
+
+ .operatorButton{
+    background-color: #ff9e06;
+ }
+ 
+ .ACButton{
+    background-color: #656561;
+ }
+
+ .wrapper{
+    width: 420px;
+    background: transparent;
+    color: #181818;
+    border-radius: 10px;
+    padding: 30px 40px;
+ }
+
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f1bb73;
+
+ }
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}  

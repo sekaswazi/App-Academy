@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div class="wrapper">
     <p> Welcome. Please Login</p>
-
         <form>
             <label for="usernameInput">Username:</label><input type="text" id="usernameInput"/></br>
             <label for="passwordInput">Password:</label><input type="password" id="passwordInput"/>
@@ -13,8 +13,10 @@
             <br><br/>
             <a href="#" onclick="verifyUser()">Login</a>
         </form>
+</div>
     <script>
-        function verifyUser() {
+        
+         function verifyUser() {
             var username = document.getElementById("usernameInput").value;
             var password = document.getElementById("passwordInput").value;
 
