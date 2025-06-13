@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body onload = "getContact()">
+    <div id ="avatarImage"></div>
+    <form id = "editForm">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="firstname" readonly><br/>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="lastname" readonly><br/>
+        <label for="mobile">Mobile</label>
+        <input type="text" id="mobile" name="mobile" readonly><br/>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" readonly><br/>
+        <label for="avatar" id="avatarLabel" hidden>Change profile image</label><br/>
+        <input type="file" id="avatar" name="avatar" hidden><br/>
+        <br/>
+        <button type="submit" id="submitForm">Submit</button>
+    </form>
+    <br/><br/>
+    <button id="homeLink" type="button">Home</button>
+    <button id="editContact" type="button">Edit</button>
+    <button id="deleteContact" type="button">Delete</button>
+
+    <script src="config.js"></script>
+
+    <script>
+        var id = getId();
+        document.getElementById("homeLink").addEventListener('click', homeLink)
+        console.log("The id is:" + id)
+
+        function getId(){
+            var url = window.location.href;
+            var pos = url.search("=");
+            var id = url.slice(pos +1);
+            return id;
+        }
+
+        function getContact(){
+            fetch(rootPath + 'controller/get-contacts/?id=' + id)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                displayOutput(data);
+                console.log(data);
+            })
+        }
+        function homeLink(){
+            window.open("index.html", "_self");
+        }
+        function displayOutput(data){
+            avatarImg = 
+            <img src="${rootPath}/controller/uploads/${data[0].avatar}" width = "200" />
+
+            document.getElementById("avatarImage").innerHTML = avatarImg;
+            document.getElementById("firstname").value = data[0].firstname;
+            
+        }
+    </script>
+</body>
+</html>
