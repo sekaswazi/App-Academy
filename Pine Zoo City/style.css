@@ -192,3 +192,11 @@ textarea{
     margin : 12px 0;
     padding : 8px 0;
 }
+
+.tabs-bottom:hover{
+    color: rgb(132, 180, 128);
+    padding: 30px 40px;
+    display: none;
+    text-decoration: none;
+
+}
